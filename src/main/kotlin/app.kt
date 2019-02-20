@@ -28,6 +28,12 @@ fun main(args: Array<String>) {
         }
     }
 
+    server.post("/") { ctx ->
+        val req = ctx.body<NewKweet>()
+        val kweet = db.add(req.handle, req.text)
+        ctx.json(kweet)
+    }
+
     server.start(7777)
 
 }
