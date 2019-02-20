@@ -28,3 +28,4 @@ build
 
 /.idea
 /.gradle
+/out

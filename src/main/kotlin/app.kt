@@ -20,6 +20,14 @@ fun main(args: Array<String>) {
         ctx.json(db.all())
     }
 
+    server.get("/:kweetid") { ctx ->
+        val kweetId = ctx.pathParam("kweetid").toInt()
+        when(val kweet = db.getById(kweetId)) {
+            null -> ctx.status(404).result("kweet #$kweetId is not found")
+            else -> ctx.json(kweet)
+        }
+    }
+
     server.start(7777)
 
 }
