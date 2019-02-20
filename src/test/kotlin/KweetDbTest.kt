@@ -46,4 +46,24 @@ class KweetDbTest {
         assertEquals("ruxmind", kweets.first().handle)
     }
 
+    @Test
+    fun `can select kweets by handle()`() {
+        // given
+        val db = KweetDb()
+
+        // when
+        db.add("user1", "hello world1")
+        db.add("user2", "hello world2")
+        db.add("user1", "hello world3")
+
+        // then
+        val kweets = db.getByHandle("user1")
+        assertFalse(kweets.isEmpty())
+        assertEquals(2, kweets.size)
+        assertEquals("user1", kweets[0].handle)
+        assertEquals("user1", kweets[1].handle)
+    }
+
+
+
 }

@@ -17,4 +17,7 @@ class KweetDb(private val store: MutableList<Kweet> = mutableListOf()) {
         store += kweet
         return kweet
     }
+
+    fun getByHandle(handle: String): List<Kweet>
+        = store.filter { it.handle == handle }
 }

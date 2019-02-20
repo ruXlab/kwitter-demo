@@ -34,6 +34,10 @@ fun main(args: Array<String>) {
         ctx.json(kweet)
     }
 
+    server.get("/u/:handle") { ctx ->
+        ctx.json(db.getByHandle(ctx.pathParam("handle")))
+    }
+
     server.start(7777)
 
 }
