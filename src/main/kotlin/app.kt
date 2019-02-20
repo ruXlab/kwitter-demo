@@ -5,6 +5,8 @@ val db = KweetDb().apply {
     add("ruxmind", "this is so fun")
     add("alice", "wow it's like kookge minus!")
     add("jack", "looks like an unicorn startup!")
+    add("ruxmind", "@alice @jack let's make it viral!")
+    add("jack", "@ruxmind did you use ruby or kotlin?")
 }
 
 fun main(args: Array<String>) {
@@ -36,6 +38,10 @@ fun main(args: Array<String>) {
 
     server.get("/u/:handle") { ctx ->
         ctx.json(db.getByHandle(ctx.pathParam("handle")))
+    }
+
+    server.get("/search/:search") { ctx ->
+        ctx.json(db.search(ctx.pathParam("search")))
     }
 
     server.start(7777)

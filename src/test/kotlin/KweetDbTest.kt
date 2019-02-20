@@ -64,6 +64,24 @@ class KweetDbTest {
         assertEquals("user1", kweets[1].handle)
     }
 
+    @Test
+    fun `can search kweets()`() {
+        // given
+        val db = KweetDb()
+
+        // when
+        db.add("user1", "kotlin is kool")
+        db.add("user2", "@user1 Python is better")
+        db.add("user1", "@user1 yes, that's why kotlin has some nice python features")
+
+        // then
+        val kweets = db.search("kotlin")
+        assertFalse(kweets.isEmpty())
+        assertEquals(2, kweets.size)
+        assertEquals("user1", kweets[0].handle)
+        assertEquals("user1", kweets[1].handle)
+    }
+
 
 
 }

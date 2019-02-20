@@ -20,4 +20,7 @@ class KweetDb(private val store: MutableList<Kweet> = mutableListOf()) {
 
     fun getByHandle(handle: String): List<Kweet>
         = store.filter { it.handle == handle }
+
+    fun search(what: String): List<Kweet>
+        = store.filter { what in it.text }
 }
