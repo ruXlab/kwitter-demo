@@ -13,6 +13,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile 'io.javalin:javalin:2.6.0'
     compile "org.slf4j:slf4j-simple:1.7.25"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.9.8"
     testCompile "junit:junit:4.12"
 }
 
