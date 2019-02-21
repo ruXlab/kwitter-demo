@@ -7,6 +7,8 @@ val db = KweetDb().apply {
     add("jack", "looks like an unicorn startup!")
     add("ruxmind", "@alice @jack let's make it viral!")
     add("jack", "@ruxmind did you use ruby or kotlin?")
+    add("alice", "I like this anti-social network!")
+    add("jack", "I'd buy this startup!")
 }
 
 fun main(args: Array<String>) {
@@ -20,6 +22,10 @@ fun main(args: Array<String>) {
 
     server.get("/") { ctx ->
         ctx.json(db.all())
+    }
+
+    server.get("/web") { ctx ->
+        ctx.html(indexPage(db))
     }
 
     server.get("/:kweetid") { ctx ->
