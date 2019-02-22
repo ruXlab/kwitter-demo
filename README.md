@@ -24,3 +24,13 @@ and even view kweets in the browser in classy 1990 interface(no gifs tho)
 
 For simple web UI open [localhost:7777/web](http://localhost:7777/web)
 
+
+### Links
+
+* [Blog post for this presentation](https://rux.vc/2019.02/gdg-reading-meetup-reading-21-feb-2019/)
+* [Author's blog](https://rux.vc/)
+* [My twitter](https://twitter.com/ruxmind)
+* [This demo project source code](https://github.com/ruXlab/kwitter-demo)
+* [Event page at Meetup](https://www.meetup.com/GDG-Reading-Thames-Valley/events/258373119/)
+
+
