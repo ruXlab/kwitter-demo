@@ -1,9 +1,12 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+    id 'application'
 }
 
 group 'vc.rux.demo.kwitter'
 version '1.0-SNAPSHOT'
+
+mainClassName = "AppKt"
 
 repositories {
     mavenCentral()

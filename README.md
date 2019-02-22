@@ -9,6 +9,10 @@ no UI, nothing really
 It allows to list all kweets, retrieve by id, create, by user handle, search
 and even view kweets in the browser in classy 1990 interface(no gifs tho) 
 
+### How to start this thing?
+
+Just run `./gradlew run`
+
 ### Created using
 
 * kotlin 1.3.21
