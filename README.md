@@ -15,8 +15,9 @@ Just run `./gradlew run`
 
 ### Created using
 
-* kotlin 1.3.21
-* javalin 2.6.0
+* **kotlin** 1.3.21
+* **javalin** 2.6.0
+* **kotlinx.html** 0.6.12
 
 ### Useful commands (using [httpie](https://httpie.org/))
 
@@ -28,6 +29,11 @@ Just run `./gradlew run`
 
 For simple web UI open [localhost:7777/web](http://localhost:7777/web)
 
+### Web UI
+
+There is an example of very basic read-only web UI built using `kotlinx.html` 
+
+![sample webpage](./webpage-sample.png)
 
 ### Links
 
